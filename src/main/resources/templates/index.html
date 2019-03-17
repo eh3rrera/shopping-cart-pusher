@@ -32,12 +32,13 @@
 
   <!-- Libs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.js"></script>
-  <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+  <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
 
   <!-- Pusher Config -->
   <script th:inline="javascript">
-    var PUSHER_APP_KEY = /*[[${pusher_app_key}]]*/ 'NA';
-    var PUSHER_CHANNEL_NAME = /*[[${pusher_channel}]]*/ 'NA';
+    var PUSHER_APP_KEY = /*[[${pusher_app_key}]]*/ ;
+    var PUSHER_CHANNEL_NAME = /*[[${pusher_channel}]]*/ ;
+    var PUSHER_CLUSTER_KEY = 'eu';
   </script>
 
   <!-- App/Components -->
