@@ -5,7 +5,8 @@ var App = React.createClass({
 
   componentWillMount: function() {
     this.pusher = new Pusher(PUSHER_APP_KEY, {
-      encrypted: true,
+     cluster: PUSHER_CLUSTER_KEY,
+     forceTLS: true
     });
     this.channel = this.pusher.subscribe(PUSHER_CHANNEL_NAME);
     this.total = 0;

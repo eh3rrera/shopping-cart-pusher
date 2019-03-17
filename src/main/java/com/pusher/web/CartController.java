@@ -1,26 +1,19 @@
 package com.pusher.web;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.bind.annotation.SessionAttributes;
-
 import com.pusher.constants.GeneralConstants;
 import com.pusher.constants.PusherConstants;
 import com.pusher.model.Product;
 import com.pusher.rest.Pusher;
 import com.pusher.web.vo.ItemRequest;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.PostConstruct;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 /**
  * Controller for the REST API used by the shopping cart
@@ -45,6 +38,8 @@ public class CartController {
 				PusherConstants.PUSHER_APP_KEY, 
 				PusherConstants.PUSHER_APP_SECRET
 		);
+		pusher.setCluster(PusherConstants.PUSHER_CLUSTER_KEY);
+		pusher.setEncrypted(true);
 		
 		Product product = new Product();
 		product.setId(1L);

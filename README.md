@@ -11,7 +11,12 @@ The stack:
 
 ## Getting Started
 1. Clone this repository and `cd` into it.
-6. Start the application with one of the following commands (if you're using an IDE like Eclipse, just run the class `com.pusher.ShoppingCartApplication`):
+
+2. Replace the credentials in **com.pusher.constants.PusherConstants.java** with your own constants.
+
+3. In index.html set the constants in lines **39,40,41 to be your own**.
+
+4. Start the application with one of the following commands (if you're using an IDE like Eclipse, just run the class `com.pusher.ShoppingCartApplication`):
 
     ```
     mvn spring-boot:run
@@ -24,7 +29,7 @@ The stack:
     java -jar target/shopping-cart-0.0.1-SNAPSHOT.jar 
     ```
     
-7. Go to `http://localhost:8080` and start playing with the app
+5. Go to `http://localhost:8080` and start playing with the app
 
 ### Prerequisites
 
